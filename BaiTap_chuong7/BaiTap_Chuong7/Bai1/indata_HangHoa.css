@@ -1,0 +1,19 @@
+table {
+    width: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 7px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(7, 7, 2);
+    text-align: center;
+}

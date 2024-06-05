@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+ol > li {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+}
+body {
+    background-color: pink;
+}

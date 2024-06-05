@@ -1,0 +1,22 @@
+h2 {
+    color: red;
+    text-align: center;
+}
+
+.p1 {
+    font-size: 14px;
+    font-style: italic;
+    background-color: rgb(34, 142, 205);
+    color: white;
+}
+
+.p2 {
+    font-size: 14px;
+    font-style: italic;
+    color: yellow;
+    background-color: burlywood;
+}
+.p1,
+.p2 {
+    margin: 0px;
+}

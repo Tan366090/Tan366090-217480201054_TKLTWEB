@@ -1,0 +1,38 @@
+.PhanThan {
+    margin-top: 4em;
+}
+
+.Trai {
+    line-height: 30px;
+    font-size: 17px;
+    margin-left: 20px;
+    background-color: #d9afd9;
+    background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+
+    width: 27em;
+    height: 11em;
+    padding: 20px 0px 20px 0px;
+}
+
+.Trai a {
+    color: black;
+    margin-left: 15px;
+}
+
+.Phai {
+    background-color: #fa8bff;
+    background-image: linear-gradient(
+        45deg,
+        #fa8bff 0%,
+        #2bd2ff 52%,
+        #2bff88 90%
+    );
+}
+
+.PhanThan {
+    display: flex;
+}
+
+.Chu {
+    margin: 20px 5px 0px 10px;
+}

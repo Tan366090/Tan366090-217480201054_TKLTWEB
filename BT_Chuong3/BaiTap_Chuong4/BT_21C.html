@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_21C</title>
+        <link rel="stylesheet" href="BT_21C.css" />
+        <script src="BT_21C.js"></script>
+
+        <!-- ------------------------------------------CSS -->
+
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <div class="GiaoDien">
+                <div class="NhapLieu">
+                    <label for="txt_So01">Nhập số nguyên a: </label>
+                    <input type="text" id="txt_So01" />
+                    <label for="txt_So02">Nhập số nguyên b:</label>
+                    <input type="text" id="txt_So02" />
+                </div>
+                <div class="LuaChon">
+                    <select name="luachon" id="lua_chon">
+                        <option value="CONG" id="Phep_cong">Phép cộng</option>
+                        <option value="NHAN" id="Phep_nhan">Phép nhân</option>
+                        <option value="CHIA" id="Phep_chia">Phép chia</option>
+                        <option value="TRU" id="Phep_tru">Phép trừ</option>
+                    </select>
+                </div>
+                <input
+                    type="button"
+                    value="Tính"
+                    id="btn_tinh"
+                    onclick="TINH()"
+                />
+                <div class="img_Retset">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/6066/6066733.png"
+                        alt="ảnh reset"
+                        onclick="XoaDuLieu ()"
+                    />
+                </div>
+                <div class="Ket_Qua">
+                    <label for="txt_KetQua">Kết quả</label>
+                    <input type="text" id="txt_KetQua" />
+                </div>
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

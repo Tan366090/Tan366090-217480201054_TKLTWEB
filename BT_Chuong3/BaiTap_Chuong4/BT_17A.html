@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Color tự chọn...</span></h1><hr>");
+
+            function doimau() {
+                var DOIMAU = document.getElementById("X").value;
+
+                document.body.style.background = DOIMAU;
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <select name="" id="X" onchange="doimau()">
+            <option value="red">Màu đỏ</option>
+            <option value="blue">Màu xanh</option>
+            <option value="yellow">Màu vàng</option>
+            <option value="lavender">Màu xanh nhạt</option>
+        </select>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

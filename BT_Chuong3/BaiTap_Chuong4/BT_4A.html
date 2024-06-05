@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_4A</title>
+        <style>
+            h2 {
+                background-color: rgb(96, 81, 81);
+                color: white;
+                border-radius: 10px;
+                border-bottom: 5px solid #531c1c;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.write("<h2>Lấy nội dung từ textbox</h2><br><hr>");
+            function HienThi() {
+                alert(msg04.value);
+                alert("Bạn hãy nhập lại vào ô txt và thử lại");
+            }
+        </script>
+
+        <form>
+            <input type="button" name="Chao" value="Chào" onclick="HienThi()" />
+            <input type="text" id="msg04" value="Chào các bạn" size="50" />
+        </form>
+    </body>
+</html>

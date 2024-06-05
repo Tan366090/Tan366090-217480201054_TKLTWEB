@@ -1,0 +1,25 @@
+ul {
+    font-weight: 800;
+}
+
+.Sub-menu-1,
+.Sub-menu-2,
+.Sub-menu-3,
+.sub-menu-4 {
+    font-weight: 100;
+    margin-left: 50px;
+    font-size: 13px;
+}
+
+.Sub-menu-2 {
+    list-style-type: square;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.Sub-menu-1,
+.sub-menu-4 {
+    list-style-type: circle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sub-menu-4 {
+    color: red;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Họ tên bí ẩn...</span></h1><hr>");
+
+            // Hàm hiển thị nội dung từ họ và tên
+            function HIENTHI() {
+                var ho = document.getElementById("txt_ho").value;
+                var ten = document.getElementById("txt_ten").value;
+
+                var hien_thi = (document.getElementById("txt_hienthi").value =
+                    ho + " " + ten);
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+
+        <form>
+            <input type="text" id="txt_ho" placeholder="Nhập họ và chữ lót" />
+            <input type="text" name="Ten" id="txt_ten" placeholder="Nhập tên" />
+            <input
+                type="button"
+                id="hienthi"
+                value="Hiển thị"
+                onclick="HIENTHI()"
+            />
+            <br />
+            <br />
+            <input type="text" id="txt_hienthi" />
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

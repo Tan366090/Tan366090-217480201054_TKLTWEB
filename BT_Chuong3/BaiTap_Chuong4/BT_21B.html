@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+        <link rel="stylesheet" href="BT_21B.css" />
+        <script src="BT_21B.js"></script>
+
+        <!-- ------------------------------------------CSS -->
+
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <div class="GiaoDien">
+                <div class="NhapLieu">
+                    <label for="txt_So01">Nhập số nguyên a: </label>
+                    <input type="text" id="txt_So01" />
+                    <label for="txt_So02">Nhập số nguyên b:</label>
+                    <input type="text" id="txt_So02" />
+                </div>
+                <div class="PhepTinh">
+                    <!-- ---------------------------------phép cộng -->
+
+                    <label for="rdo_PhepCong">Phép cộng</label>
+                    <input type="radio" name="radio" id="rdo_PhepCong" />
+                    <br />
+                    <!-- ----------------------------------------Phép trừ -->
+                    <label for="rdo_PhepTru">Phép trừ</label>
+                    <input type="radio" name="radio" id="rdo_PhepTru" />
+
+                    <br />
+                    <!-- ------------------------------------phép Nhân--------- -->
+                    <label for="rdo_PhepNhan">Phép nhân</label>
+                    <input type="radio" name="radio" id="rdo_PhepNhan" />
+                    <br />
+
+                    <!-- ------------------------------------------------Phép chia -->
+                    <label for="rdo_PhepChia">Phép chia</label>
+                    <input type="radio" name="radio" id="rdo_PhepChia" />
+                </div>
+                <input
+                    type="button"
+                    value="Tính"
+                    id="btn_tinh"
+                    onclick="TINH()"
+                />
+                <div class="img_Retset">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/6066/6066733.png"
+                        alt="ảnh reset"
+                        onclick="XoaDuLieu ()"
+                    />
+                </div>
+                <div class="Ket_Qua">
+                    <label for="txt_KetQua">Kết quả</label>
+                    <input type="text" id="txt_KetQua" />
+                </div>
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

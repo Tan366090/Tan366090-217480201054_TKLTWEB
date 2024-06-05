@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>CLICK...</span></h1><hr>");
+
+            function textbox() {
+                alert("Bạn đã nhấp vào rồi kìa.... thank U");
+            }
+
+            function button() {
+                alert("bạn đã nhấp vào nút gửi...");
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+
+        <form action="">
+            <input
+                type="text"
+                id="txt_gui"
+                placeholder="Click me!"
+                onclick="textbox()"
+            />
+            <input type="button" id="btn_gui" value="Gửi" onclick="button()" />
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 14em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+
+            #txt_hoten {
+                margin-left: 50px;
+            }
+            #txt_namvaolam {
+                margin-left: 6px;
+            }
+            #txt_heso {
+                margin-left: 55px;
+            }
+            #txt_luongcoso {
+                margin-left: 12px;
+            }
+
+            #txt_luongcoban {
+                margin-left: 40px;
+            }
+
+            #txt_phucap {
+                margin-left: 83px;
+            }
+
+            #txt_thamnien {
+                margin-left: 65px;
+            }
+
+            #txt_thanhtien {
+                margin-left: 65px;
+            }
+            .thanhtren {
+                width: 22.5em;
+                height: 5px;
+                background-color: rgba(242, 6, 57, 0.742);
+            }
+            .input {
+                background-color: rgb(174, 190, 186);
+                padding: 20px;
+                width: 20em;
+            }
+
+            .TinhToan {
+                margin-top: 4px;
+                background-color: rgb(216, 226, 224);
+                padding: 20px;
+                width: 20em;
+            }
+            #btn_tinhluong {
+                padding: 10px 15px;
+                border: 5px solid orangered;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                background-color: rgb(183, 184, 186);
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write(
+                "<h1><span>Tính miếng cơm manh áo...</span></h1><hr>"
+            );
+
+            // tính toán số liệu
+            function KetQua() {
+                var namvaolam = parseInt(
+                    document.getElementById("txt_namvaolam").value
+                );
+                var heso = parseFloat(
+                    document.getElementById("txt_heso").value
+                );
+                var luongcoso = parseInt(
+                    document.getElementById("txt_luongcoso").value
+                );
+
+                if (isNaN(heso) || isNaN(luongcoso) || isNaN(namvaolam)) {
+                    alert("vui lòng nhập là số....");
+                    return;
+                }
+                // tính lương cơ bản
+                var luongcoban = parseFloat(
+                    document.getElementById("txt_luongcoban").value
+                );
+                luongcoban = heso * luongcoso;
+                document.getElementById("txt_luongcoban").value = luongcoban;
+
+                // tính phụ cấp
+                var phucap = parseFloat(
+                    document.getElementById("txt_phucap").value
+                );
+                phucap = 0.25 * luongcoban;
+                document.getElementById("txt_phucap").value = phucap;
+
+                // tính thành tiền
+                var thanhtien = parseFloat(
+                    document.getElementById("txt_thanhtien").value
+                );
+                thanhtien = luongcoban + phucap;
+                document.getElementById("txt_thanhtien").value = thanhtien;
+            }
+
+            function TinhThamNien() {
+                var namhientai = new Date().getFullYear();
+                var namvaolam = parseInt(
+                    document.getElementById("txt_namvaolam").value
+                );
+
+                var thamnien = namhientai - namvaolam;
+                document.getElementById("txt_thamnien").value = thamnien;
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+
+        <form action="">
+            <div class="thanhtren"></div>
+            <div class="input">
+                <label for="txt_hoten">Nhập họ tên: </label>
+                <input type="text" id="txt_hoten" />
+                <br /><br />
+                <label for="txt_namvaolam">Nhập năm vào làm: </label>
+                <input type="text" id="txt_namvaolam" />
+                <br /><br />
+                <label for="txt_heso">Nhập hệ số: </label>
+                <input type="text" id="txt_heso" />
+                <br /><br />
+                <label for="txt_luongcoso">Nhập lương cơ sở: </label>
+                <input type="text" id="txt_luongcoso" />
+            </div>
+            <br /><br />
+            <!-- tạo nút tính lương -->
+            <input
+                type="button"
+                id="btn_tinhluong"
+                value="Tính Lương"
+                onclick="TinhThamNien(), KetQua()"
+            />
+            <!-- ------------------------------------------ -->
+
+            <div class="TinhToan">
+                <label for="txt_luongcoban">Lương cơ bản: </label>
+                <input type="text" id="txt_luongcoban" /><br /><br />
+
+                <label for="txt_phucap">Phụ cấp</label>
+                <input type="text" id="txt_phucap" />
+                <br /><br />
+
+                <label for="txt_thamnien">Thâm niên</label>
+                <input type="text" id="txt_thamnien" />
+                <br /><br />
+
+                <label for="txt_thanhtien">Thành tiền</label>
+                <input type="text" id="txt_thanhtien" />
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

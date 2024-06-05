@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tạo nút thông báo</title>
+        <style>
+            h2 {
+                background-color: rgb(6, 114, 114);
+                color: white;
+                padding: 20px;
+                border-radius: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.write("<h2>Tạo Button thông báo bằng JavaScipt</h2> <br>");
+            document.write("<hr>");
+            function thongbao(txt) {
+                alert(txt); //In ra messabox
+            }
+        </script>
+        <form>
+            <input
+                type="button"
+                name="callthongbao"
+                value="Thông báo"
+                onclick="thongbao('Chào mừng bạn đến với bình minh vô tận!....')"
+            />
+        </form>
+    </body>
+</html>

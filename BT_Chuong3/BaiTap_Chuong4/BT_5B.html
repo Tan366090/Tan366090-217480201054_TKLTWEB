@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài tập số 5B</title>
+
+        <!-- CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!--  -->
+    </head>
+    <body>
+        <!-- JS -->
+        <script>
+            document.write("<h1><span>Ngày tháng năm</span></h1><hr>");
+            var ntn = new Date();
+            document.write(
+                "<span style = 'display: flex'>" +
+                    "<h3>Hôm nay: ngày  " +
+                    ntn.getDate() +
+                    " " +
+                    "</h3>" +
+                    "<h3> Tháng " +
+                    ntn.getMonth() +
+                    "</h3>" +
+                    "<h3> Năm " +
+                    ntn.getFullYear() +
+                    "</h3>" +
+                    "</span>"
+            );
+            function DiemSo() {
+                for (let i = 2; i <= 7; i++) {
+                    console.log(i);
+                }
+            }
+            DiemSo();
+        </script>
+        <!--  -->
+        <!-- HTML -->
+
+        <!--  -->
+    </body>
+</html>

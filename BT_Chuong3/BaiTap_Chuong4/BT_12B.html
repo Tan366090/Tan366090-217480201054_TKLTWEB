@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_8A</title>
+
+        <!-- CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- JavaScript -->
+        <script>
+            document.write("<h1><span>Text huyền bí...</span></h1><hr>");
+
+            function Ten_txt() {
+                var ten_txt = document.getElementById("ten_txt").value;
+                alert("Tên của bạn là: " + ten_txt);
+            }
+
+            function Namsinh_txt() {
+                var namsinh_txt = document.getElementById("namsinh_txt").value;
+                alert("Năm sinh của bạn là:" + namsinh_txt);
+            }
+
+            function Reset_txt() {
+                document.getElementById("ten_txt").value = "";
+                document.getElementById("namsinh_txt").value = "";
+            }
+        </script>
+
+        <!-- HTML -->
+        <form>
+            <input type="text" id="ten_txt" placeholder="Nhập vào tên..." />
+            <input type="button" value="Hiển thị" onclick="Ten_txt()" />
+
+            <input
+                type="text"
+                id="namsinh_txt"
+                placeholder="Nhập vào năm sinh..."
+            />
+            <input type="button" value="Hiển thị" onclick="Namsinh_txt()" />
+
+            <input type="button" value="reset" onclick="Reset_txt()" />
+        </form>
+    </body>
+</html>

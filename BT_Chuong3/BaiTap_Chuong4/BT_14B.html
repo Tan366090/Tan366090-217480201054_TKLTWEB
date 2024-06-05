@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+            input {
+                margin-bottom: 10px;
+                padding: 3px;
+            }
+
+            .sohang {
+                background-color: rgb(135, 169, 226);
+                padding: 20px;
+                border-radius: 5px 40px 60px 7px;
+                width: 300px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            .PhepTinh {
+                margin-top: 20px;
+                width: 300px;
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Phép toán tuổi thơ 2...</span></h1><hr>");
+
+            function phepcong() {
+                var A = parseInt(document.getElementById("SoHang_1").value);
+                var B = parseInt(document.getElementById("SoHang_2").value);
+
+                var ketqua = (document.getElementById("txt_KetQua").value =
+                    A + B);
+            }
+
+            function pheptru() {
+                var A = parseInt(document.getElementById("SoHang_1").value);
+                var B = parseInt(document.getElementById("SoHang_2").value);
+
+                var ketqua = (document.getElementById("txt_KetQua").value =
+                    A - B);
+            }
+
+            function phepnhan() {
+                var A = parseInt(document.getElementById("SoHang_1").value);
+                var B = parseInt(document.getElementById("SoHang_2").value);
+
+                var ketqua = (document.getElementById("txt_KetQua").value =
+                    A * B);
+            }
+
+            function phepchia() {
+                var A = parseInt(document.getElementById("SoHang_1").value);
+                var B = parseInt(document.getElementById("SoHang_2").value);
+
+                var ketqua = (document.geElementById("txt_KetQua").value =
+                    A / B);
+            }
+            function XOA() {
+                document.getElementById("SoHang_1").value = " ";
+                document.getElementById("SoHang_2").value = " ";
+                document.getElementById("txt_KetQua").value = " ";
+            }
+
+            function uncheckOthers(currentCheckbox) {
+                var checkboxes = document.getElementsByName("checkbox_C");
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i] !== currentCheckbox) {
+                        checkboxes[i].checked = false;
+                    }
+                }
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+
+        <form>
+            <h2>Nhập vào 2 số bất kỳ để thực hiện phép toán</h2>
+            <div class="sohang">
+                <input type="text" id="SoHang_1" placeholder="Số hạng 1" />
+                <br />
+                <input type="text" id="SoHang_2" placeholder="Số hạng 2" />
+
+                <br />
+            </div>
+
+            <div class="PhepTinh">
+                <input
+                    name="checkbox_C"
+                    type="checkbox"
+                    id="chk_PhepCong"
+                    value="0"
+                    onclick="phepcong()"
+                    onchange="uncheckOthers(this)"
+                />
+                Phép +
+
+                <input
+                    name="checkbox_C"
+                    type="checkbox"
+                    id="chk_PhepTru"
+                    value="1"
+                    onclick="pheptru()"
+                    onchange="uncheckOthers(this)"
+                />
+                Phép -
+                <input
+                    name="checkbox_C"
+                    type="checkbox"
+                    id="chk_PhepNhan"
+                    value="2"
+                    onclick="phepnhan()"
+                    onchange="uncheckOthers(this)"
+                />
+                Phép *
+                <input
+                    name="checkbox_C"
+                    type="checkbox"
+                    id="chk_PhepChia"
+                    value="3"
+                    onclick="phepchia()"
+                    onchange="uncheckOthers(this)"
+                />
+                Phép /
+            </div>
+
+            <div class="ketqua">
+                <input type="text" id="txt_KetQua" placeholder="Kết quả:..." />
+            </div>
+            <input type="button" id="xoa" value="Làm lại" onclick="XOA()" />
+        </form>
+
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

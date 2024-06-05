@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Tính tổng hai số...</span></h1><hr>");
+
+            function TinhTong() {
+                var A = parseInt(document.getElementById("txt_A").value);
+                var B = parseInt(document.getElementById("txt_B").value);
+
+                var ketqua = parseInt(
+                    (document.getElementById("txt_resuft").value = A + B)
+                );
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+
+        <form>
+            <div class="tinhtongg">
+                <input
+                    type="text"
+                    name="txt_A"
+                    id="txt_A"
+                    placeholder="Nhập số a..."
+                />
+                <input
+                    type="text"
+                    name="txt_B"
+                    id="txt_B"
+                    placeholder="Nhập số B..."
+                />
+                <br />
+                <br />
+                <div class="ketquaa">
+                    <input
+                        type="button"
+                        name="btn_sum"
+                        value="Tính tổng"
+                        onclick="TinhTong()"
+                    />
+                    <input
+                        type="text"
+                        name="txt_resuft"
+                        id="txt_resuft"
+                        placeholder="Kết quả..."
+                    />
+                </div>
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

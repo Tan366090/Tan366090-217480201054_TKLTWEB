@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_15A</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 15em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+
+            .txt {
+                display: flex;
+                flex-direction: column;
+                width: 12rem;
+            }
+            #Mau_Nen,
+            #Mau_Chu,
+            #Tieu_De,
+            #Trang_Thai {
+                margin-bottom: 10px;
+            }
+            #btnCap_Nhat {
+                transition: background-color 0.5s;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write(
+                "<h1><span>Cú click thay đổi cuộc sống...</span></h1><hr>"
+            );
+
+            function CapNhat() {
+                var mauchu = document.getElementById("Mau_Chu").value;
+                var maunen = document.getElementById("Mau_Nen").value;
+                var tieude = document.getElementById("Tieu_De").value;
+                var trangthai = document.getElementById("Trang_Thai").value;
+
+                document.body.style.backgroundColor = maunen;
+                document.body.style.color = mauchu;
+                document.title = tieude;
+                window.status = trangthai;
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <div class="txt">
+                <input type="text" id="Mau_Chu" placeholder="Nhập màu chữ..." />
+                <input type="text" id="Mau_Nen" placeholder="Nhập màu nền..." />
+                <input type="text" id="Tieu_De" placeholder="Nhập tiêu đề..." />
+                <input
+                    type="text"
+                    id="Trang_Thai"
+                    placeholder="Nhập trạng thái"
+                />
+                <input
+                    type="button"
+                    id="btnCap_Nhat"
+                    value="Cập nhật"
+                    onclick="CapNhat()"
+                />
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

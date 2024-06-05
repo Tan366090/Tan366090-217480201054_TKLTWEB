@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+th {
+    text-align: center;
+}
+
+.ThoiKhoaBieu {
+    margin: 50px 10px 10px 10px;
+}
+.Chieu,
+.Sang {
+    background-color: coral;
+    text-align: center;
+    font-weight: 800;
+}

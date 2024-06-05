@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+        <link rel="stylesheet" href="BT_21A.css" />
+        <script src="BT_21A.js"></script>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <div class="GiaoDien">
+                <div class="NhapLieu">
+                    <label for="txt_So01">Nhập số nguyên a: </label>
+                    <input type="text" id="txt_So01" />
+                    <label for="txt_So02">Nhập số nguyên b:</label>
+                    <input type="text" id="txt_So02" />
+                </div>
+                <div class="PhepTinh">
+                    <!-- ---------------------------------phép cộng -->
+
+                    <input
+                        type="button"
+                        value="Phép cộng"
+                        id="btn_PhepCong"
+                        onclick="PhepCong()"
+                    />
+
+                    <!-- ----------------------------------------Phép trừ -->
+
+                    <input
+                        type="button"
+                        value="Phép trừ   "
+                        id="btn_PhepTru"
+                        onclick="PhepTru()"
+                    />
+
+                    <!-- ------------------------------------phép Nhân--------- -->
+
+                    <input
+                        type="button"
+                        value="Phép nhân"
+                        id="btn_PhepNhan"
+                        onclick="PhepNhan()"
+                    />
+
+                    <!-- ------------------------------------------------Phép chia -->
+
+                    <input
+                        type="button"
+                        value="Phép chia "
+                        id="btn_PhepChia"
+                        onclick="PhepChia()"
+                    />
+                </div>
+                <div class="Ket_Qua">
+                    <label for="txt_KetQua">Kết quả</label>
+                    <input type="text" id="txt_KetQua" />
+                </div>
+            </div>
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_4B</title>
+        <style>
+            h2 {
+                background-color: rgb(96, 81, 81);
+                color: white;
+                border-radius: 20px;
+                border-bottom: 5px solid #531c1c;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script lang="JavaScript">
+             document.write("<h2>Tạo Button và textbox</h2><br><hr>");
+            function hotenn() {
+                alert(txthoten.value);
+            }
+
+            function donvii() {
+                alert(txtdonvi.value);
+            }
+        </script>
+        <div style="margin-top: 20px"></div>
+        <form>
+            <input
+                type="button"
+                value="Họ tên"
+                name="hoten"
+                onclick="hotenn()"
+            />
+
+            <input type="text" value="Chào" id="txthoten" />
+            <input
+                type="button"
+                value="Đơn vị"
+                name="donvi"
+                onclick="donvii()"
+            />
+            <input type="text" value="donvi" id="txtdonvi" size="10" />
+        </form>
+    </body>
+</html>

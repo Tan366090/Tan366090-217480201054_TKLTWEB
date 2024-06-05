@@ -1,0 +1,59 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+h1 {
+    margin-left: 5px;
+}
+.GiaoDien {
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+    display: inline-block;
+    background-color: rgba(243, 248, 246, 0.905);
+    width: 21rem;
+    margin: 50px;
+    line-height: 30px;
+    padding: 10px 20px 10px 10px;
+    border-left: 10px solid black;
+    box-shadow: -3px -7px 6px 0px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: -3px -7px 6px 0px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: -3px -7px 6px 0px rgba(0, 0, 0, 0.53);
+}
+.NhapLieu {
+}
+
+.PhepTinh {
+    margin-top: 20px;
+}
+
+#btn_PhepCong,
+#btn_PhepChia,
+#btn_PhepNhan,
+#btn_PhepTru {
+    margin-left: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: inline-block;
+    border: 2px solid rgb(216, 24, 14);
+    margin-bottom: 4px;
+}
+
+#btn_PhepChia,
+#btn_PhepTru {
+    margin-left: 40px;
+}
+
+.Ket_Qua {
+    margin-top: 20px;
+}
+
+#btn_PhepCong:hover,
+#btn_PhepChia:hover,
+#btn_PhepNhan:hover,
+#btn_PhepTru:hover {
+    background-color: rgb(139, 137, 137);
+}

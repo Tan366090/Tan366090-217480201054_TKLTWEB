@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Chuột truy tìm...</span></h1><hr>");
+
+            // hàm khi di chuyển chuột đến
+            function Thongbao_txt(message) {
+                document.getElementById("hoten").value = message;
+            }
+
+            function xoa_txt() {
+                document.getElementById("hoten").value = " ";
+            }
+
+            // button
+            function Thongbao_btn(message) {
+                document.getElementById("btn").value = message;
+            }
+
+            function timlai_button() {
+                document.getElementById("btn").value = "Button";
+            }
+
+            // checkbox
+            function tim_checkbox() {
+                alert("chuột đang checkbox");
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <input
+                type="text"
+                id="hoten"
+                onmouseover="Thongbao_txt('Chuột đang đến Textbox')"
+                onmouseout="xoa_txt()"
+                placeholder="họ tên"
+            />
+            <br />
+            <br />
+            <input
+                type="button"
+                value="button"
+                id="btn"
+                onmouseover="Thongbao_btn('Chuột đang tìm button')"
+                onmouseout="timlai_button()"
+            />
+
+            <input type="checkbox" id="ckb" onclick="tim_checkbox()" />
+            checkbox
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_8A</title>
+
+        <!-- ----------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ------------------ -->
+    </head>
+    <body>
+        <!-- ------------------JS -->
+        <script>
+            document.write("<h1><span>Text huyền bí...</span></h1><hr>");
+
+            function hienthi_txt() {
+                alert(txt.value);
+            }
+        </script>
+        <!-- --------------------- -->
+
+        <!-- ----------HTML----------- -->
+        <form>
+            <input type="text" id="txt" placeholder="Nhập vào đi..." />
+            <input
+                type="button"
+                id="btn"
+                value="Hiển thị"
+                onclick="hienthi_txt()"
+            />
+        </form>
+        <!-- --------------------- -->
+    </body>
+</html>

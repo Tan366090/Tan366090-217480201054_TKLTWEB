@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Tính tiền...</span></h1><hr>");
+
+            function thanhtien() {
+                var SL = document.getElementById("txt_SoLuong").value;
+                var DG = document.getElementById("txt_DonGia").value;
+
+                document.getElementById("txt_ThanhTien").value = SL * DG;
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <input
+                type="text"
+                id="txt_SoLuong"
+                placeholder="Nhập số lượng"
+                oninput="thanhtien()"
+            />
+            <br />
+            <br />
+            <input
+                type="text"
+                id="txt_DonGia"
+                placeholder="Nhập Đơn giá"
+                oninput="thanhtien()"
+            />
+            <br />
+            <br />
+            Thành tiền:
+            <input type="text" id="txt_ThanhTien" placeholder="Thành Tiền" />
+            VND
+        </form>
+
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

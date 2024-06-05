@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tính tuổi</title>
+
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.write("<h1><span>Web tính tuổi...</span></h1><hr>");
+            // hàm tính tuổi
+            function HAMTINHTUOI() {
+                var age_NamMD, age_NamNhapVao, age;
+                age_NamMD = new Date().getFullYear();
+                age_NamNhapVao = document.getElementById("txtnamsinh").value;
+                age = age_NamMD - age_NamNhapVao;
+
+                // nếu dữ liệu nhập vào không phải là chữ => hợp lệ
+                if (age_NamNhapVao && !isNaN(age_NamNhapVao)) {
+                    document.getElementById("result").innerHTML =
+                        "Tuổi của bạn là: " + age + " tuổi.";
+                } else {
+                    document.getElementById("result").innerHTML =
+                        "Không hợp lệ vui lòng nhập lại";
+                }
+            }
+            function btnxoa() {
+                document.getElementById("txtnamsinh").value = " ";
+            }
+        </script>
+
+        <form>
+            <input type="text" id="txtnamsinh" placeholder="Nhập năm sinh..." />
+            <input
+                type="button"
+                id="btntinhtuoi"
+                value="Tính"
+                onclick="HAMTINHTUOI()"
+            />
+            <input type="button" value="reset" id="reset" onclick="btnxoa()" />
+        </form>
+        <p id="result"></p>
+    </body>
+</html>

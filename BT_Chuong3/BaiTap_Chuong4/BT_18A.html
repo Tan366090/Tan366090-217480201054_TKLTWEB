@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_12C</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+            #sokytu {
+                padding: 10px 80px 0px 0px;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Khám phá Textarea...</span></h1><hr>");
+
+            // Hàm điếm tổng số ký tự trong ô texteare
+            function count_kytu() {
+                var kytu = document.getElementById("Noi_dung").value;
+
+                if (kytu.length > 200) {
+                    document.getElementById("sokytu").value =
+                        "Vượt quá 200 ký tự rồi...";
+                } else {
+                    document.getElementById("sokytu").value = kytu.length;
+                }
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <textarea
+                name="Noidung"
+                id="Noi_dung"
+                cols="30"
+                rows="10"
+                oninput="count_kytu()"
+            ></textarea>
+            <br />
+            <input type="text" id="sokytu" placeholder="Tổng số ký tự" />
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>

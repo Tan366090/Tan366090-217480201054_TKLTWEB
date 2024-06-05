@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_9B</title>
+
+        <!-- ----------------CSS -->
+        <!-- CSS JS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 17em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+
+            /* CSS cho HTML */
+            table {
+                width: 100%;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid black;
+                padding: 7px;
+            }
+            th {
+                background-color: rgb(233, 232, 231);
+            }
+        </style>
+        <!-- ------------------ -->
+    </head>
+    <body>
+        <!-- ------------------JS -->
+        <script>
+            document.write(
+                "<h1><span>Danh sách các thiết bị văn phòng...</span></h1><hr>"
+            );
+
+            // khai báo biến số lượng và biến danh sách.
+            var soluong;
+            var arr = [];
+
+            // cho người dùng nhập vào số lượng thiết bị văn phòng.
+            soluong = parseInt(
+                prompt("Nhập vào số lượng thiết bị văn phòng...", 3)
+            );
+
+            // cho người dùng nhập vào danh sách các thiết bị văn phòng.
+            function computer(soluong) {
+                for (var i = 1; i <= soluong; i++) {
+                    arr.push(prompt("Nhập vào thiết bị thứ " + i));
+                }
+                return arr;
+            }
+            // đặt list_computer = danh sách computer mà người dùng nhập vào.
+            var List_computer = computer(soluong);
+
+            // in danh sách mà người dùng vừa nhập vào bảng
+            var table = "<table><tr><th>STT</th><th>List computer</th></tr>";
+            for (var i = 0; i < List_computer.length; i++) {
+                table +=
+                    "<tr><td>" +
+                    (i + 1) +
+                    "</td><td>" +
+                    List_computer[i] +
+                    "</td></tr>";
+            }
+            table += "</table>";
+            document.write(table);
+        </script>
+        <!-- --------------------- -->
+
+        <!-- ----------------------HTML -->
+        <!-- --------------------------- -->
+    </body>
+</html>

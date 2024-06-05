@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_9A</title>
+
+        <!-- ----------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+        <!-- ------------------ -->
+    </head>
+    <body>
+        <!-- ------------------JS -->
+        <script>
+            document.write("<h1><span>Danh sách lớp bí ẩn...</span></h1><hr>");
+            var num;
+            var arr = [];
+
+            num = parseInt(prompt("Danh sách có mấy người...."));
+            for (i = 1; i <= num; i++) {
+                arr.push(prompt("Nhập tên người thứ " + i));
+            }
+            arr.sort();
+            document.write("<h2>Danh sách bạn vừa nhập</h2>");
+            for (x in arr) {
+                document.write(arr[x] + "<br><hr>");
+            }
+        </script>
+        <!-- --------------------- -->
+    </body>
+</html>

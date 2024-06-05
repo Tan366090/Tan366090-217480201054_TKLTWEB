@@ -1,0 +1,16 @@
+.Than {
+    min-width: 20em;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+.Khoa,
+.Doc {
+    font-weight: 100;
+}
+
+.Doc {
+    margin-left: 90px;
+}

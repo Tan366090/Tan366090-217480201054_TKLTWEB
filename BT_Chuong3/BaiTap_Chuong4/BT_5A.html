@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_5A</title>
+
+        <!--------------------------------- CSS -->
+        <style>
+            body {
+                background-color: rgb(246, 245, 246);
+            }
+
+            .header {
+                background-color: rgba(171, 166, 166, 0.637);
+                padding: 20px;
+                border-radius: 2px;
+            }
+
+            .btnNhapVao,
+            .btnChiSo {
+                background-color: #453d3df8;
+                color: white;
+                padding: 6px 10px;
+                border-radius: 4px;
+                font-family: "Times New Roman", Times, serif;
+            }
+            .btnNhapVao:hover,
+            .btnChiSo:hover {
+                background-color: black;
+            }
+            .btnChiSo {
+                padding: 6px 18px;
+            }
+
+            .txtNhapVao,
+            .txtChiSo {
+                margin-left: 5px;
+                padding: 3px 10px;
+                border: 1px solid black;
+                border-left: 2px solid black;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+
+            span {
+                background-color: rgb(76, 164, 202);
+                padding: 10px 50px 10px 2px;
+                border-left: 8px solid orange;
+            }
+        </style>
+        <!-- -------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------JavaScrip -->
+        <script>
+            document.write("<h1><span>Tạo nút bấm</span><h1><hr>");
+            // nhập vào
+            function nhapvao() {
+                alert("Xin chào bạn Đạt");
+                alert(btn1NhapVao.value);
+            }
+            function chiso() {
+                alert("Bạn đã code JavaScript thành công!");
+            }
+        </script>
+        <!-- ------------------HTML -->
+        <div class="dangnhap">
+            <form>
+                <div class="header">
+                    <div class="NhapVao">
+                        <input
+                            type="button"
+                            value="Nhấp vào"
+                            class="btnNhapVao"
+                            id="btn1NhapVao"
+                            onclick="nhapvao()"
+                        />
+                        <input type="text" class="txtNhapVao" />
+                    </div>
+                    <div class="ChiSo">
+                        <input
+                            type="button"
+                            value="Chỉ số"
+                            class="btnChiSo"
+                            onclick="chiso()"
+                        />
+                        <input type="text" class="txtChiSo" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

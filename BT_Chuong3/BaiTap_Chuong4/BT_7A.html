@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_7A</title>
+
+        <!-- ------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ------------------JS -->
+        <script>
+            document.write("<h1><span>Web tính tuổi...</span></h1><hr>");
+            var NS_hientai, NS_nhapvao, age;
+
+            do {
+                NS_nhapvao = prompt("Nhập vào năm sinh của bạn....");
+                NS_hientai = new Date().getFullYear();
+                age = NS_hientai - NS_nhapvao;
+                document.write("<h2>Tuổi của bạn là: </h2>" + " " + age);
+            } while (NS_nhapvao > NS_hientai);
+            // NS_nhapvao = prompt("Nhập vào năm sinh của bạn....");
+            // NS_hientai = new Date().getFullYear();
+
+            // if (NS_nhapvao < NS_hientai) {
+            //     age = NS_hientai - NS_nhapvao;
+            //     document.write("<h2>Tuổi của bạn là: </h2>" + " " + age);
+            // } else {
+            //     document.write("Bạn nhập sai...");
+            // }
+        </script>
+    </body>
+</html>

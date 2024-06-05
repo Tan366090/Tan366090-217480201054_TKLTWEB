@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT_17B</title>
+
+        <!-- ------------------------------------------CSS -->
+        <style>
+            h1 {
+                background-color: aqua;
+                width: 10em;
+                padding: 10px;
+                border-left: 6px solid orangered;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            }
+            span {
+                margin-left: 10px;
+            }
+
+            input {
+                transition: background-color 2s;
+            }
+        </style>
+        <!-- ----------------------------------------------- -->
+    </head>
+    <body>
+        <!-- ----------------------------------------------JS -->
+        <script>
+            document.write("<h1><span>Checkbox đổi màu...</span></h1><hr>");
+
+            // hàm chỉ check được 1 trong số còn lại...
+            function uncheck(currentCheckbox) {
+                var checkbox = document.getElementsByName("mau");
+                for (var i = 0; i < checkbox.length; i++) {
+                    if (checkbox[i] !== currentCheckbox) {
+                        checkbox[i].checked = false;
+                    }
+                }
+            }
+
+            // hàm thay đổi background-color
+            function Thaydoi_background_do() {
+                var background = document.getElementById("maudo").value;
+                document.body.style.backgroundColor = background;
+            }
+            function Thaydoi_background_vang() {
+                var background = document.getElementById("mauvang").value;
+                document.body.style.backgroundColor = background;
+            }
+            function Thaydoi_background_xanh() {
+                var background = document.getElementById("mauxanh").value;
+                document.body.style.backgroundColor = background;
+            }
+            function Thaydoi_background_xanhbien() {
+                var background = document.getElementById("mauxanhbien").value;
+                document.body.style.backgroundColor = background;
+            }
+        </script>
+        <!-- --------------------- -->
+        <!-- ------------HTML------------------------------- -->
+        <form action="">
+            <input
+                type="checkbox"
+                value="red"
+                name="mau"
+                id="maudo"
+                onchange="uncheck(this)"
+                onclick="Thaydoi_background_do()"
+            />
+            màu đỏ <br />
+            <input
+                type="checkbox"
+                value="yellow"
+                name="mau"
+                id="mauvang"
+                onchange="uncheck(this)"
+                onclick="Thaydoi_background_vang()"
+            />
+            màu vàng <br />
+            <input
+                type="checkbox"
+                value="cadetblue"
+                name="mau"
+                id="mauxanh"
+                onchange="uncheck(this)"
+                onclick="Thaydoi_background_xanh()"
+            />
+            màu xanh
+            <br />
+            <input
+                type="checkbox"
+                value="blue"
+                name="mau"
+                id="mauxanhbien"
+                onchange="uncheck(this)"
+                onclick="Thaydoi_background_xanhbien()"
+            />
+            màu xanh biển<br />
+        </form>
+        <!-- --------------------- --.------------------------->
+    </body>
+</html>
